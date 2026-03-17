@@ -6,10 +6,10 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Brand Colors */
-  --color-primary: #E8913A;
-  --color-primary-dark: #D07A2F;
+  --color-primary: #D07A2F;
+  --color-primary-dark: #A85F1E;
   --color-secondary: #2C3E50;
-  --color-accent: #F4D03F;
+  --color-accent: #E67E22;
   --color-accent-2: #27AE60;
 
   /* Neutrals */
@@ -18,7 +18,7 @@
   --color-bg-card-hover: #FFF2E6;
   --color-surface: #FAF5EF;
   --color-text: #2C3E50;
-  --color-text-muted: #7F8C8D;
+  --color-text-muted: #5A6C7D;
   --color-border: rgba(44, 62, 80, 0.1);
 
   /* Typography */
@@ -171,13 +171,18 @@ ul { list-style: none; }
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #fff;
-  box-shadow: 0 4px 20px rgba(232, 145, 58, 0.3);
+  box-shadow: 0 4px 20px rgba(208, 122, 47, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(232, 145, 58, 0.45);
+  box-shadow: 0 8px 28px rgba(208, 122, 47, 0.45);
   color: #fff;
+}
+
+.btn-primary:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .btn-outline {
@@ -190,6 +195,11 @@ ul { list-style: none; }
   background: var(--color-secondary);
   border-color: var(--color-secondary);
   color: #fff;
+}
+
+.btn-outline:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .btn-outline-light {
@@ -343,7 +353,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 40%, rgba(232, 145, 58, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 40%, rgba(208, 122, 47, 0.12) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 20%, rgba(244, 208, 63, 0.1) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 80%, rgba(39, 174, 96, 0.06) 0%, transparent 50%),
     linear-gradient(180deg, #FFF8F0 0%, #FAF0E4 40%, #F5E6D0 100%);
@@ -537,7 +547,7 @@ ul { list-style: none; }
   border-radius: var(--border-radius-sm);
   text-align: center;
   color: #fff;
-  box-shadow: 0 8px 24px rgba(232, 145, 58, 0.3);
+  box-shadow: 0 8px 24px rgba(208, 122, 47, 0.3);
 }
 
 .accent-number {
@@ -571,14 +581,14 @@ ul { list-style: none; }
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(232, 145, 58, 0.04);
+  background: rgba(208, 122, 47, 0.04);
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--color-border);
   transition: var(--transition);
 }
 
 .about-feature:hover {
-  background: rgba(232, 145, 58, 0.08);
+  background: rgba(208, 122, 47, 0.08);
   border-color: rgba(232, 145, 58, 0.2);
 }
 
@@ -628,7 +638,7 @@ ul { list-style: none; }
 
 .menu-tab:hover {
   color: var(--color-secondary);
-  border-color: rgba(232, 145, 58, 0.3);
+  border-color: rgba(208, 122, 47, 0.3);
   background: var(--color-bg-card-hover);
 }
 
@@ -670,7 +680,7 @@ ul { list-style: none; }
   transform: translateY(-4px);
   border-color: rgba(232, 145, 58, 0.2);
   background: var(--color-bg-card-hover);
-  box-shadow: 0 12px 32px rgba(232, 145, 58, 0.1);
+  box-shadow: 0 12px 32px rgba(208, 122, 47, 0.1);
 }
 
 .menu-card:hover::before { opacity: 1; }
@@ -944,8 +954,8 @@ ul { list-style: none; }
 }
 
 .info-card:hover {
-  border-color: rgba(232, 145, 58, 0.2);
-  box-shadow: 0 8px 24px rgba(232, 145, 58, 0.08);
+  border-color: rgba(208, 122, 47, 0.2);
+  box-shadow: 0 8px 24px rgba(208, 122, 47, 0.08);
 }
 
 .info-icon {
@@ -992,8 +1002,8 @@ ul { list-style: none; }
 }
 
 .newsletter-inner {
-  background: linear-gradient(135deg, rgba(232, 145, 58, 0.08), rgba(244, 208, 63, 0.06));
-  border: 1px solid rgba(232, 145, 58, 0.15);
+  background: linear-gradient(135deg, rgba(208, 122, 47, 0.08), rgba(230, 126, 34, 0.06));
+  border: 1px solid rgba(208, 122, 47, 0.15);
   border-radius: var(--border-radius);
   padding: 3.5rem;
   text-align: center;
@@ -1038,7 +1048,9 @@ ul { list-style: none; }
 
 .newsletter-form input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(232, 145, 58, 0.15);
+  box-shadow: 0 0 0 3px rgba(208, 122, 47, 0.2);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
 }
 
 /* ---------- Footer ---------- */

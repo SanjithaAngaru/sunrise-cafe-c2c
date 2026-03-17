@@ -67,7 +67,25 @@ a {
 
 a:hover { color: var(--color-primary-dark); }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
+
+/* Image container fit styles */
+.gallery-placeholder img,
+.about-image-placeholder img,
+.hero-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-placeholder p,
+.about-image-placeholder p,
+.hero-image-placeholder p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 ul { list-style: none; }
 
@@ -458,6 +476,14 @@ ul { list-style: none; }
 @keyframes scrollPulse {
   0%, 100% { opacity: 1; height: 40px; }
   50% { opacity: 0.3; height: 20px; }
+}
+
+.hero-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  height: auto;
 }
 
 /* ---------- About ---------- */
